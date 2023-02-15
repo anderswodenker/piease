@@ -13,7 +13,7 @@
 ### READ TEMPERATURE AND HUMIDITY
 
 ```python
-# import the DS18B20 Library
+# import the TMP117 Library
 from sensorlib.tmp117 import TMP117
 
 # init your sensor

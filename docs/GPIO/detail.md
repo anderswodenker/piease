@@ -1,28 +1,22 @@
-# DS18B20 (Temperature Sensor)
-
-## Schema
-
-![schema](schema_ds18b20.png ':size=450')
-
-## Wiring
-
-?> GND to GND | VDD to 3V | Data to GPIO 4
-
-![schema](raspberry_ds18b20.png ':size=450')
-
-!> It is possible to wire more than one Sensor. Just wire in a row! 🙂 
+# GPIO (on/off)
 
 ## Usage
 
 ### Main function
 
 ```python
-# import the DS18B20 Library
-from sensorlib.ds18b20 import DS18B20
+# import the GPIO Library
+from sensorlib.gpio import Device
 
-# init your sensor
-my_sensor = DS18B20()
+# init your Device with the GPIO Number and the Name
+my_device = Device(18, "relay")
 
-# get data from sensor with tempC
-temperature = my_sensor.tempC(0) # 0 is the first Sensor. If you have more than one, just change the number (0, 1, 2, 3 ...)
+# switch device on
+my_device.on()
+
+# switch device off
+my_device.off()
 ```
+
+!> The Name of the Device makes a diffrence. If you name your Device "led", it will turn on and off the LED. (High and
+Low on the Pin are switched)

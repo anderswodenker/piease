@@ -1,3 +1,10 @@
+# PWM (Pulse width modulation)
+
+## Alpha
+
+This library is in the alpha. Just look at the code:
+
+```python
 import os
 from fileinput import input
 
@@ -32,3 +39,6 @@ except KeyboardInterrupt:  # trap a CTRL+C keyboard interrupt
     GPIO.cleanup()  # resets all GPIO ports used by this function
     exit()
 
+```
+
+!> The Code is functional, but not finished yet. Test it out if you want.

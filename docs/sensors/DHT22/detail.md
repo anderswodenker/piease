@@ -13,7 +13,7 @@
 ### READ TEMPERATURE AND HUMIDITY
 
 ```python
-# import the DS18B20 Library
+# import the DHT22 Library
 from sensorlib.dht22 import DHT22
 
 # init your sensor
