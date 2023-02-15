@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      h1 {
+        text-align: center;
+        font-size: 40px;
+        font-family: sans-serif;
+        margin-top: 50px;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .generator-form {
+        background-color: #f2f2f2;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px #888888;
+        text-align: center;
+      }
+
+      input[type="text"] {
+        width: 60%;
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: 20px;
+        border-radius: 5px;
+        border: 1px solid #cccccc;
+      }
+
+      input[type="submit"] {
+        width: 20%;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 5px;
+        border: 1px solid #cccccc;
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+      }
+
+      .generated-name {
+        margin-top: 20px;
+        font-size: 30px;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pet Name Generator</h1>
+    <div class="container">
+      <form class="generator-form">
+        <input type="text" placeholder="Enter pet type (e.g. dog, cat)">
+        <input type="submit" value="Generate Name">
+        <div class="generated-name"></div>
+      </form>
+    </div>
+  </body>
+</html>

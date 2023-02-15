@@ -1,0 +1,18 @@
+%button {
+  font-size: var(--button-font-size);
+  border: 1px solid var(--color-text);
+  background: var(--color-dark);
+  color: var(--color-white);
+  padding: 15px;
+  transition: .3s ease-out;
+  border-radius: 13px;
+  appearance: none;
+  margin: 30px auto;
+  display: block;
+  font-weight: bolder;
+  cursor: pointer;
+  &:hover {
+    //background: var(--color-text);
+    //color: var(--color-icon-hover);
+  }
+}

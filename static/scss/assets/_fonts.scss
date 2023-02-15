@@ -1,0 +1,67 @@
+
+
+html {
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: var(--light-font-weight);
+  margin: 0;
+}
+
+h1, .h1 {
+  font-size: var(--big-font-size);
+  line-height: var(--big-line-height);
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+h2, .h2 {
+  font-size: var(--medium-font-size);
+  line-height: var(--medium-line-height);
+}
+
+h3, .h3 {
+  font-size: var(--medium-font-size);
+  line-height: var(--medium-line-height);
+}
+
+h4, .h4 {
+  font-size: var(--medium-font-size);
+  line-height: var(--medium-line-height);
+}
+
+h5, .h5 {
+  font-size: var(--normal-font-size);
+  line-height: var(--normal-line-height);
+}
+
+h6, .h6 {
+  font-size: var(--normal-font-size);
+  line-height: var(--normal-line-height);
+}
+
+a {
+  font-size: var(--link-font-size);
+  line-height: var(--link-line-height);
+  color: var(--color-link);
+  &:hover {
+    color: var(--color-hover);
+  }
+}
+
+p {
+  font-size: var(--normal-font-size);
+  line-height: var(--normal-line-height);
+  color: var(--color-text);
+  a {
+    text-decoration: none;
+  }
+}
+
+ul {
+  margin: 25px 0;
+  font-size: var(--normal-font-size);
+  line-height: var(--normal-line-height);
+}

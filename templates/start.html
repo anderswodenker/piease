@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+    <section class="start">
+        <h1>Your pet name generator!</h1>
+
+        <div class="floating_cat">
+            <img class="blinking" src="{{ url_for('static', filename='images/float_cat_two.png') }}" alt="floating cat">
+            <img src="{{ url_for('static', filename='images/floating_cat.png') }}" alt="floating cat">
+        </div>
+
+    </section>
+
+    <section class="tags">
+        <span class="tag" @click="click_tags('sex', 'female')" :class="{'active': sex === 'female'}">female</span>
+        <span class="tag" @click="click_tags('sex', 'male')" :class="{'active': sex === 'male'}">male</span>
+        <span class="tag" @click="click_tags('sex', 'dunno')" :class="{'active': sex === 'dunno'}">dunno</span>
+    </section>
+
+    <section class="tags">
+        <span class="tag" @click="click_tags('char', 'funny')" :class="{'active': char === 'funny'}">funny</span>
+        <span class="tag" @click="click_tags('char', 'serious')" :class="{'active': char === 'serious'}">serious</span>
+        <span class="tag" @click="click_tags('char', 'godlike')" :class="{'active': char === 'godlike'}">godlike</span>
+        <div class="rolling_cat">
+            <img class="blinking" src="{{ url_for('static', filename='images/rolling_cat_two.png') }}"
+                 alt="floating cat">
+            <img src="{{ url_for('static', filename='images/rolling_cat.png') }}" alt="floating cat">
+        </div>
+    </section>
+
+    <section class="tags">
+        <span class="tag" @click="click_tags('pet', 'cat')" :class="{'active': pet === 'cat'}">cat</span>
+        <span class="tag" @click="click_tags('pet', 'dog')" :class="{'active': pet === 'dog'}">dog</span>
+        <span class="tag" @click="click_tags('pet', 'racoon')" :class="{'active': pet === 'racoon'}">racoon</span>
+    </section>
+
+    <section class="name">
+        <p>[[ chosen_one.name ]]</p>
+        <span class="line"></span>
+        <span class="error">[[input_error]]</span>
+    </section>
+    <button @click="find_names">gimme the name!</button>
+{% endblock %}

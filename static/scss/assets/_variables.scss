@@ -1,0 +1,78 @@
+
+$bp1: 320px;
+$bp2: 480px;
+$bp3: 600px;
+$bp4: 768px;
+$bp45: 900px;
+$bp5: 1110px;
+$bp6: 1280px;
+$bp7: 1920px;
+
+$colors: (
+        'primary': #1d1d1d,
+        'secondary': #4291d3,
+        'tertiary': #c5650f,
+        'error': #e74c3c,
+        'success':#71c534,
+        'text': #EDEEE9,
+        'dark': #111111,
+        'shadow': #EDEEE9,
+        'border': #7f8c8d,
+        'logo': #EDEEE9,
+        'icon': #00e676,
+        'icon-hover': #69f0ae,
+        'link': #ff9800,
+        'hover': #ffff00,
+        'neutral': #3E3E40,
+        'black': #000000,
+        'white': #ffffff,
+        'purple': #ce0051,
+        'green': #60CC92
+);
+
+$sizes: (
+        'container-width': 1280px,
+        'wrapper-padding': 25px
+);
+
+$fontsizes: (
+        'button-font-size': 40px,
+        'light-font-weight': 300,
+        'regular-font-weight': 400,
+        'semibold-font-weight': 600,
+        'bold-font-weight': 700,
+
+        'big-font-size': 3.5rem,
+        'big-line-height': 21 / 21,
+        'big-letter-spacing': 0,
+
+        'medium-font-size': 3.0rem,
+        'medium-line-height': 20 / 20,
+        'medium-letter-spacing': 0,
+
+        'normal-font-size': 18px,
+        'normal-line-height': 22px,
+        'normal-letter-spacing': 0,
+
+        'small-font-size': 1.6rem,
+        'small-line-height': 16 / 16,
+        'small-letter-spacing': 0,
+
+        'vsmall-font-size': 1.3rem,
+        'vsmall-line-height': 18 / 18,
+        'vsmall-letter-spacing': 0
+);
+
+:root {
+  @each $name, $color in $colors {
+    --color-#{$name}: #{$color};
+  }
+
+  @each $name, $size in $sizes {
+    --#{$name}: #{$size};
+  }
+
+  @each $name, $fontsetting in $fontsizes {
+    --#{$name}: #{$fontsetting};
+  }
+}

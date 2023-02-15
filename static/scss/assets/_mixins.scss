@@ -1,0 +1,250 @@
+@mixin media-bp($bp) {
+  @media screen and (min-width: #{$bp}) {
+    @content;
+  }
+}
+
+@mixin media-between($bpStart: $bp3, $bpEnd: $bp45) {
+  @media (min-width: $bpStart) and (max-width: #{$bpEnd - 1}) {
+    @content;
+  }
+}
+
+// Breakpoints, the declarative way
+@mixin for-phone-only {
+  @media (max-width: #{$bp3 - 1}) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: $bp3) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-only {
+  @media (min-width: $bp3) and (max-width: #{$bp45 - 1}) {
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape-up {
+  @media (min-width: $bp45) {
+    @content;
+  }
+}
+
+@mixin for-tablet-only {
+  @media (min-width: $bp3) and (max-width: #{$bp5 - 1}) {
+    @content;
+  }
+}
+
+@mixin for-phone-and-tablet-only {
+  @media (max-width: #{$bp45}) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media (min-width: $bp5) {
+    @content;
+  }
+}
+
+// Color Functions
+@function dark($color, $percentage: 10%) {
+  @return darken($color, $percentage);
+}
+@function darker($color, $percentage: 20%) {
+  @return darken($color, $percentage);
+}
+
+@function light($color, $percentage: 10%) {
+  @return lighten($color, $percentage);
+}
+@function lighter($color, $percentage: 20%) {
+  @return lighten($color, $percentage);
+}
+
+@mixin font-size($font-size: 16) {
+  font-size: #{$font-size / 16}rem;
+}
+
+@mixin add-svg-icon($classname, $width, $height, $svg) {
+  .icon-#{$classname} {
+    background-image: url('data:image/svg+xml;charset=utf-8,#{$svg}');
+    //content: url('data:image/svg+xml;charset=utf-8,#{$svg}');
+    display: inline-block;
+    height: $height;
+    width: $width;
+  }
+}
+
+
+/// Adds a browser prefix to the property
+/// @param {*} $property Property
+/// @param {*} $value Value
+@mixin css3-prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -khtml-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  -o-#{$property}: #{$value};
+  #{$property}: #{$value};
+}
+
+/// Background Size
+/// @param {Size} $width [100%] - Width
+/// @param {Size} $width [$width] - Height
+/// @require {mixin} css3-prefix
+
+@mixin background-size($width: 100%, $height: $width) {
+  @if type-of($width) == 'number' and $height != null {
+    @include css3-prefix('background-size', $width $height);
+  } @else {
+    @include css3-prefix('background-size', $width);
+  }
+}
+
+
+/// Columns
+/// @param {Integer} $count [3] - Count
+/// @param {Integer} $gap [10] - Gap
+/// @require {mixin} css3-prefix
+
+@mixin columns($count: 3, $gap: 10) {
+  column-count: #{$count};
+  column-gap: #{$gap};
+}
+
+
+/// Double Borders
+/// @param {Color} $colorOne [#3C3C3C] - Color One
+/// @param {Color} $colorTwo [#999999] - Color Two
+/// @param {Size} $radius [0] - Radius
+/// @require {mixin} css3-prefix
+/// @require {mixin} border-radius
+
+@mixin double-borders($colorOne: #3C3C3C, $colorTwo: #999999, $radius: 0) {
+  border: 1px solid $colorOne;
+
+  @include css3-prefix('box-shadow', 0 0 0 1px $colorTwo);
+
+  @include border-radius($radius);
+}
+
+
+/// Flip
+/// @param {Double} $scaleX [-1] - ScaleX
+/// @require {mixin} css3-prefix
+
+@mixin flip($scaleX: -1) {
+  @include css3-prefix('transform', scaleX($scaleX));
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+/// Transition
+/// @param {List} $properties - Properties
+
+@mixin transition($properties...) {
+  @if length($properties) >= 1 {
+    transition: #{$properties};
+  } @else {
+    transition: .3s ease-in-out;
+  }
+}
+
+/// Keyframes
+/// @param {*} $animation-name - Animation name
+/// @content [Animation css]
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+// mixin for custom checkboxes/radio buttons
+@mixin vh() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+
+//space to all directions
+// by mukutu GmbH
+@mixin indentDirection($maxRange,$value ) {
+  $directions: ('top', 'left', 'bottom', 'right');
+  $directionsCount: length($directions);
+
+  @for $i from 1 to $directionsCount + 1 {
+
+    @for $ii from -5 to $maxRange + 10 {
+      &.#{nth($directions, abs($i))}-#{$ii} {
+        margin-#{nth($directions, abs($i))}: ($ii / 2) + $value !important;
+      }
+    }
+  }
+
+  @include media-bp($bp3) {
+    @for $i from 1 to $directionsCount + 1 {
+
+      @for $ii from -5 to $maxRange + 10 {
+        &.#{nth($directions, abs($i))}-#{$ii} {
+          margin-#{nth($directions, abs($i))}: $ii + $value !important;
+        }
+      }
+    }
+  }
+}
+
+// by anderswodenker
+@mixin flex-grid($margin, $list-breakpoint, $list-columns, $max-rows) {
+  @include flexbox();
+  align-items: stretch;
+  flex-wrap: wrap;
+  div.row {
+    width: 100%;
+  }
+  @each $breakpoint in $list-breakpoint {
+    @include media-bp($breakpoint) {
+      $index: index($list-breakpoint, $breakpoint);
+      div.row {
+        $calc: (100/nth($list-columns, $index)) / 100;
+        $width: percentage($calc);
+        width: calc(#{$width} - (#{$margin} / (#{nth($list-columns, $index)} / #{nth($list-columns, $index) - 1})));
+        margin: 0 0 $margin 0;
+        @for $ii from 1 to $max-rows {
+          &:nth-child(#{$ii}n) {
+            margin: 0 $margin $margin 0;
+          }
+        }
+
+        &:nth-child(#{nth($list-columns, $index)}n) {
+          margin: 0 0 $margin 0;
+        }
+      }
+    }
+  }
+}
