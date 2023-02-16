@@ -1,3 +1,4 @@
+(0.0.1)
 # What is PiEase?
 
 **PiEase** is a **very simple** development environment that comes with a [prebuilt image]() for the RaspberryPi (3 and
@@ -19,7 +20,7 @@ about configuration or environment.
 
 ## First Steps
 
-1. [Download the prebuilt image here.]()
+1. [Download the prebuilt image here.]() (coming soon!)
 2. [Install the official Raspberry Pi Imager](https://www.raspberrypi.com/software/), to write the Image on a SD Card
 3. Open the Application and choose OS, scroll down to "Use Custom" and open the latest PiEase .img
 
