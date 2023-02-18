@@ -39,3 +39,13 @@ my_sensors = DS18B20()
 # get number of devices
 device_counts = my_sensors.device_count()
 ```
+
+!> If you want to change the pin, use the following commands... 
+
+```shell
+    sudo dtoverlay w1-gpio gpiopin=4 pullup=0  # header pin 7
+    sudo dtoverlay w1-gpio gpiopin=17 pullup=0 # header pin 11
+    sudo dtoverlay w1-gpio gpiopin=27 pullup=0 # header pin 13
+```
+
+Thanks to [pinout.xyz](https://pinout.xyz/pinout/1_wire#)

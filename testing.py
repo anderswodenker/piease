@@ -1,12 +1,3 @@
-# GPIO (on/off)
-
-## Usage
-
-### Main function
-
-Just use the [gpiozero](https://gpiozero.readthedocs.io/en/stable/recipes.html) module. It is pre-installed on the Image.
-
-```python
 # import warnings too
 import warnings
 
@@ -28,7 +19,3 @@ time.sleep(1)
 
 # switch it off
 led.off()
-
-```
-
-!> This Module will updatet in the future. For now, just supress the warnings.
