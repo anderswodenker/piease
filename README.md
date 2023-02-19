@@ -1,8 +1,5 @@
 (0.0.1)
 
-# IN DEVELOPMENT!
-
-contact me, if you want to contribute! 👋
 # What is PiEase?
 
 **PiEase** is a **very simple** development environment that comes with a [prebuilt image]() for the RaspberryPi (3 and
@@ -13,12 +10,23 @@ With **PiEase** you can write web applications or simple control programs for yo
 worrying
 about configuration or environment.
 
+**Plug and Play** for following Devices (link to Amazon Products):
 
-![logo](docs/images/logos.png ':size=250')
+- [DS18B20](https://amzn.to/3YZJu50)
+- [DH22](https://amzn.to/3YKgluL)
+- [AHT20](https://amzn.to/3kc6MWC)
+- [TMP117](https://amzn.to/3lOX259)
+- [Relay](https://amzn.to/3xAoeag)
+- [HX711 for load cell](https://amzn.to/3lMIlQ7)
+- [Load Cell](https://amzn.to/41aXquI)
 
-- Flask under the hood for Web Development
-- easy to use libraries for sensors and general GPIO managing
-- scripts to quick install your own python jobs, even after reboot (```supervisorctl```)
+(more will follow)
 
-# This Framework is optimized for pre installed version of a Rapsberry Pi image!
+## Documentation
 
+### [Link to Docs](https://anderswodenker.github.io/piease/#/)
+
+## Download image
+## the image will follow in a few days!
+
+# This Site is still in Development!
