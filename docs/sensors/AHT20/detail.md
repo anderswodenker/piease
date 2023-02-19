@@ -2,7 +2,7 @@
 
 ## Wiring
 
-?> GND to GND | VDD to 3V | SCL to GPIO 4 | SCL to GPIO 2
+?> GND to GND | VDD to 3V | SCL to GPIO 3 | SDA to GPIO 2
 
 ![schema](raspberry_aht20.png ':size=450')
 

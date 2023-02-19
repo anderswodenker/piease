@@ -21,7 +21,7 @@ about configuration or environment.
 ## First Steps
 
 1. [Download the prebuilt image here.]() (coming soon!)
-2. [Install the official Raspberry Pi Imager](https://www.raspberrypi.com/software/), to write the Image on a SD Card
+2. [Install the official Raspberry Pi Imager](https://www.raspberrypi.com/software/), to write the Image on a SD Card (16GB)
 3. Open the Application and choose OS, scroll down to "Use Custom" and open the latest PiEase .img
 
 ![logo](images/getting_started/choose_os.png ':size=450')

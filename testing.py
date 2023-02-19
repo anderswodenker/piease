@@ -1,21 +1,10 @@
-# import warnings too
-import warnings
+# import the AHT20 Library
+from sensorlib.aht20 import AHT20
 
-# ignore actual warnings / there is a problem with the GPiO Module. This will updatet in the future!
-warnings.filterwarnings('ignore')
+# init your sensor
+my_sensor = AHT20()
 
-# import gpiozero
-from gpiozero import LED
-import time
+# get data from sensor
+sensor_data = my_sensor.get_data()  # example:  {'temp':20, 'hum': 40}
 
-# init Device (Relay or LED or other GPIO Device)
-led = LED(17)
-
-# switch it on
-led.on()
-
-# wait one second
-time.sleep(1)
-
-# switch it off
-led.off()
+print(sensor_data)
