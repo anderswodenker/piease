@@ -6,8 +6,6 @@
 
 ![schema](raspberry_load_cell.png ':size=450')
 
-!> Look at [Adafruit](https://learn.adafruit.com/adafruit-aht20/python-circuitpython) for further information
-
 ## Usage
 
 ### CALIBRATE AND GET DATA

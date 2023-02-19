@@ -26,7 +26,7 @@ class Scale:
             self.hx.set_offset(self.offset)
             return True
         except Exception as e:
-            self.error.log.exception(e)
+            print(e)
             return False
 
     def has_error(self):
@@ -45,6 +45,7 @@ class Scale:
                 return False
 
         except Exception as e:
+            print(e)
             return True
 
     def calibrate(self, weight):
@@ -72,6 +73,7 @@ class Scale:
             self.config.set_config_data("SCALE", "calibrated", 1)
             return True
         except ValueError as e:
+            print(e)
             return False
 
     def get_data(self):
@@ -85,6 +87,7 @@ class Scale:
             self.hx.power_down()
             return measure_weight
         except Exception as e:
+            print(e)
             return False
 
     def reset(self):

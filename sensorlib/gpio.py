@@ -10,14 +10,14 @@ class Device:
 
     def on(self):
         GPIO.setup(self.pin, GPIO.OUT)
-        if self.type == "led":
-            GPIO.output(self.pin, GPIO.HIGH)
-        else:
+        if self.type == "relay":
             GPIO.output(self.pin, GPIO.LOW)
+        else:
+            GPIO.output(self.pin, GPIO.HIGH)
 
     def off(self):
         GPIO.setup(self.pin, GPIO.OUT)
-        if self.type == "led":
-            GPIO.output(self.pin, GPIO.LOW)
-        else:
+        if self.type == "relay":
             GPIO.output(self.pin, GPIO.HIGH)
+        else:
+            GPIO.output(self.pin, GPIO.LOW)

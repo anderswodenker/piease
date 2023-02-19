@@ -20,23 +20,10 @@ class LocalConfig:
     def get_config_data(self):
         try:
             self.config.read(self.path)
-            for key, value in self.config.items("SETTINGS"):
-                value = self.is_bool(value)
-                self.settings[key] = value
             for key, value in self.config.items("SCALE"):
                 value = self.is_bool(value)
                 self.scale[key] = value
-            for key, value in self.config.items("AUDIO"):
-                value = self.is_bool(value)
-                self.audio[key] = value
-            for key, value in self.config.items("DATA"):
-                value = self.is_bool(value)
-                self.data[key] = value
-            for key, value in self.config.items("ERROR"):
-                value = self.is_bool(value)
-                self.error[key] = value
 
-            self.usb_path = f"{mapping.usb_path}/{self.settings['device_id']}"
         except IOError:
             return False
 
@@ -48,9 +35,6 @@ class LocalConfig:
             return False
         else:
             return value
-
-    def set_error(self, sensor, value):
-        self.set_config_data("ERROR", sensor, value)
 
     def set_config_data(self, section, key, value):
         self.config.set(section, key, str(value))

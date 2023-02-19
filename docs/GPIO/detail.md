@@ -7,28 +7,15 @@
 Just use the [gpiozero](https://gpiozero.readthedocs.io/en/stable/recipes.html) module. It is pre-installed on the Image.
 
 ```python
-# import warnings too
-import warnings
+# Import GPIO library
+from sensorlib.gpio import Device
 
-# ignore actual warnings / there is a problem with the GPiO Module. This will updatet in the future!
-warnings.filterwarnings('ignore')
+# init your device with GPIO and Name
+device = Device(21, "relay")
 
-# import gpiozero
-from gpiozero import LED
-import time
-
-# init Device (Relay or LED or other GPIO Device)
-led = LED(17)
-
-# switch it on
-led.on()
-
-# wait one second
-time.sleep(1)
-
-# switch it off
-led.off()
+# switch your device on or off
+device.off()
 
 ```
 
-!> This Module will updatet in the future. For now, just supress the warnings.
+!> If you name your Device "relay", .on() will be GPIO.LOW and .off() is GPIO.HIGH
