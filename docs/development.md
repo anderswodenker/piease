@@ -2,50 +2,43 @@
 
 !> Find your Raspberry Pi IP Adresse first. It depends on your Network and Router configurations. I work here with ```192.168.0.13``` as an Example. There are many Guides to find the Adresse out there.
 
-1. Use or Install a Coding IDE like [Visual Studio Code](https://code.visualstudio.com/), or [PyCharm](https://www.jetbrains.com/de-de/pycharm/)
-2. Connect your IDE with the RaspberrPi. **PiEase ist found on ```/home/pi/piease/```**
-3. [Clone]() the PiEase Framework
-
-?> **You don`t need to install a virtual environment. Develop on your Desktop and compile on your Raspberry Pi. Just upload your files in the PiEase Project. PyCharm and VisualStudio Code has an automatic Upload function**
-
-4. Browse to your RaspberrPi IP Adresse ```http://192.168.0.13```
-5. You can see a pre installed WebApp with some Examples.
-
-### It is easy to customize the web app! Or Install an own app.
-
-
-#### Here are some examples how easy...
-
-
-```python
-# READ TEMPERATUR FROM a DS18B20 Sensor
-
-from sensorlib.ds18b20 import DS18B20
-
-my_sensor = DS18B20()  # init your DS18B20 Sensor
-
-# print the sensors value in Celsius
-print(my_sensor.tempC(0))  # 0 is for the first Sensor
+1. [Clone](https://github.com/anderswodenker/piease) the PiEase Framework and open it with your favorite IDE like [Visual Studio Code](https://code.visualstudio.com/), or [PyCharm](https://www.jetbrains.com/de-de/pycharm/)
+2. Connect to the Raspberry Pi over ssh
+```shell
+ssh pi@192.168.0.13
 ```
 
-```python
-# TURN A RELAY ON AND OFF
+?> **The Password is "piease"**
 
-from sensorlib.gpio import Device
-import time
+- In PyCharm and VisualStudio Code it is possible to connect the Repo directly over SFTP with the Raspberry Pi. This is easier and a time safer!
+- **If you need help or some pro tips, check out my [patreon](patreon.com/piease)**
 
-# init your new Device with a GPIO Pin and Name
-my_device = Device(18, 'relay')  
 
-# switch device on
-my_device.on()
+!> **Activate the "home/pi/piease/venv" before testing your code.**
 
-# wait 5 Seconds
-time.sleep(5)
+```shell
+source venv/bin/activate
+```
+deactivate the Virtual Environment:
 
-# switch device off
-my_device.off()
+```shell
+deactivate
 ```
 
 
-# Yes, it is that easy!
+
+### Try to build your owm App! See the docs and play with the testing.py and some sensors, to see how easy it is.
+
+## WebApp
+
+```
+http://192.168.0.13 
+```
+
+This URL opens the preinstalled WebApp (This IP is an example). 
+
+```shell
+restart_flask
+```
+
+Restarts the Flask Server

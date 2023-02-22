@@ -5,14 +5,16 @@
 # What is PiEase?
 
 **PiEase** is a **very simple** development environment that comes with a [prebuilt image]() for the RaspberryPi (3 and
+
 4) to make your life a
-little easier out there.
+   little easier out there. If you have a Raspberry Pi in your Box, or buy a fresh one - Kickstart your new Project with
+   ease! No hustle, just start!
 
 With **PiEase** you can write web applications or simple control programs for your Raspberry in no time, without
 worrying
 about configuration or environment.
 
-**Plug and Play** for following Devices (link to Amazon Products):
+**Plug and Play** for following Devices (link to Amazon products):
 
 - [DS18B20](https://amzn.to/3YZJu50)
 - [DH22](https://amzn.to/3YKgluL)
@@ -22,16 +24,18 @@ about configuration or environment.
 - [HX711 for load cell](https://amzn.to/3lMIlQ7)
 - [Load Cell](https://amzn.to/41aXquI)
 
-(more will follow)
+(...to be continued)
 
 ![Code with piease](piease-rocket-small.png)
+
 ## Documentation
 
 ### [Link to Docs](https://anderswodenker.github.io/piease/#/)
 
-
 ![Code with piease](piease-download-small.png)
+
 ## Download image
+
 ## the image will follow in a few days!
 
 # This Site is still in Development!

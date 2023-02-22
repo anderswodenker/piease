@@ -1,4 +1,5 @@
 * [First Steps](/)
+* [Install the SD](install_sd.md)
 * [Quick Start](development.md)
 * [GPIO GENERAL](GPIO/general.md)
 * * [GPIO (on / off)](GPIO/detail.md)
@@ -11,4 +12,4 @@
 * * * [DHT22](sensors/DHT22/detail.md)
 * * * [TMP117](sensors/TMP117/detail.md)
 * * [Analog / Digital Input]()
-* * * [SCALE](sensors/SCALE/detail.md)
+* * * [LOAD CELL](sensors/SCALE/detail.md)

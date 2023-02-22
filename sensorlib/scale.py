@@ -1,3 +1,8 @@
+"""
+based on hx711.py by Jiri Dohnalek
+written by anderswodenker
+easily calibrate and get data from a load cell like the H20A from BOSCH (or any other load cell)
+"""
 import RPi.GPIO as GPIO
 from numpy import median
 import time
@@ -49,6 +54,11 @@ class Scale:
             return True
 
     def calibrate(self, weight):
+        """
+        Calibrates the load cell with a specific weight
+        :param weight: int (in gramm)
+        :return: bool
+        """
         try:
             self.value = int(weight)
 
@@ -77,6 +87,10 @@ class Scale:
             return False
 
     def get_data(self):
+        """
+        simply returns the data from the load cell in gramm
+        :return: int (in gramm)
+        """
         try:
             self.hx.power_up()
             vals = []
@@ -91,11 +105,19 @@ class Scale:
             return False
 
     def reset(self):
+        """
+        resets all values from the load cell
+        :return:
+        """
         self.config.set_config_data("SCALE", "ratio", 0)
         self.config.set_config_data("SCALE", "offset", 0)
         self.config.set_config_data("SCALE", "calibrated", 0)
 
     def tare(self):
+        """
+        tare the load cell to zero
+        :return:
+        """
         self.hx.tare()
         self.config.set_config_data("SCALE", "offset", self.hx.get_offset())
 

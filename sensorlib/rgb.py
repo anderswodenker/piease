@@ -1,3 +1,8 @@
+"""
+based on https://gpiozero.readthedocs.io/en/stable/recipes.html
+written to make your life easier
+anderswodenker
+"""
 from gpiozero import RGBLED
 from time import sleep
 

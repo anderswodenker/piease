@@ -46,7 +46,7 @@ class DS18B20:
         f.close()
         return lines
 
-    def tempC(self, index=0):
+    def get_data(self, index=0):
         try:
             # call this to get the temperature in degrees C
             # detected by a sensor
@@ -70,6 +70,7 @@ class DS18B20:
                 return 999
         except Exception as e:
             print(e)
+            return False
 
     def device_count(self):
         # call this to see how many sensors have been detected

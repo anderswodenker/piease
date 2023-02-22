@@ -21,12 +21,8 @@ try:
     GPIO.setwarnings(False)
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(DEFAULT_PIN, GPIO.OUT, initial=GPIO.LOW)
-    led = GPIO.PWM(DEFAULT_PIN, PWM_FREQ)
-    while True:
-        freq = input('freq: ')
-        led.start(int(freq))
-        time.sleep(1)
-
+    fan = GPIO.PWM(DEFAULT_PIN, PWM_FREQ)
+    fan.start(int(freq))
 
 except KeyboardInterrupt:  # trap a CTRL+C keyboard interrupt
     GPIO.cleanup()  # resets all GPIO ports used by this function

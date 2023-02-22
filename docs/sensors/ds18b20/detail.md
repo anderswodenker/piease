@@ -24,7 +24,7 @@ from sensorlib.ds18b20 import DS18B20
 my_sensors = DS18B20()
 
 # get data from sensor with tempC
-temperature = my_sensors.tempC(0) # 0 is the first Sensor. If you have more than one, just change the number (0, 1, 2, 3 ...)
+temperature = my_sensors.get_data(0) # 0 is the first Sensor. If you have more than one, just change the number (0, 1, 2, 3 ...)
 ```
 
 ### COUNT DEVICES

@@ -1,3 +1,31 @@
 @import "assets/styles";
 
+img {
+  max-width: 100%;
+}
 
+div.start {
+  margin: calc(50vh - 200px) auto;
+  width: 40%;
+  text-align: center;
+}
+
+span.version {
+  font-size: var(--big-font-size);
+}
+
+div.links {
+  a {
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 20px;
+    color: var(--color-green);
+    &:hover {
+      color: var(--color-hover);
+    }
+  }
+}
+
+p {
+  color: var(--color-primary);
+}
