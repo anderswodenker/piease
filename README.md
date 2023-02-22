@@ -1,12 +1,8 @@
-(0.0.1)
-
-![Code with piease](piease-coding-small.png)
+[![Code with PiEase](piease-coding-small.png)](https://docs.piease.com/)
 
 # What is PiEase?
 
-**PiEase** is a **very simple** development environment that comes with a [prebuilt image]() for the RaspberryPi (3 and
-
-4) to make your life a
+**PiEase** is a **very simple** development environment that comes with a [prebuilt image]() **for the RaspberryPi (3 and 4)** to make your life a
    little easier out there. If you have a Raspberry Pi in your Box, or buy a fresh one - Kickstart your new Project with
    ease! No hustle, just start!
 
@@ -26,16 +22,12 @@ about configuration or environment.
 
 (...to be continued)
 
-![Code with piease](piease-rocket-small.png)
+# Documentation
 
-## Documentation
+For guidance on installation and development, see the [Docs](https://docs.piease.com/)
 
-### [Link to Docs](https://anderswodenker.github.io/piease/#/)
+# Get the Image
 
-![Code with piease](piease-download-small.png)
+Be patient. The Image will follow soon!
 
-## Download image
-
-## the image will follow in a few days!
-
-# This Site is still in Development!
+(0.0.1 BETA)
