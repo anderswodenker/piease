@@ -1,4 +1,4 @@
-[![Code with PiEase](piease-coding-small.png)](https://docs.piease.com/)
+[![Code with PiEase](readme_banner.png)](https://www.raspberrypi.com)
 
 # What is PiEase?
 
