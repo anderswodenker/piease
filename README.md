@@ -28,6 +28,6 @@ For guidance on installation and development, see the [Docs](https://docs.piease
 
 # Get the Image
 
-Be patient. The Image will follow soon!
+[Download the beta version](https://www.dittserver.de/download/piease)
 
-(0.0.1 BETA)
+(0.0.2 BETA)
