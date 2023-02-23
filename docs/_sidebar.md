@@ -1,4 +1,4 @@
-* [First Steps](/)
+* [PiEase](/)
 * [Install the SD](install_sd.md)
 * [Quick Start](development.md)
 * [GPIO GENERAL](GPIO/general.md)

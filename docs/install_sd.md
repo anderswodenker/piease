@@ -1,4 +1,4 @@
-## Install the SD Card
+# Install the SD Card
 
 1. [Download the prebuilt image here.]() (coming soon!)
 2. [Install the official Raspberry Pi Imager](https://www.raspberrypi.com/software/), to write the Image on a SD Card (16GB)
@@ -8,21 +8,25 @@
 
 ![logo](images/getting_started/custom.png ':size=450')
 
-?> Choose the downloaded ```piease_latest.img``` file from PiEase and then your Storage Device
+?> Choose the downloaded ```piease_{latest}.img``` file from PiEase and then your Storage Device
 
-4. Now click on the Cog Icon bottom right, to make some Configurations.
+![logo](images/getting_started/choose_and_write.png ':size=450')
 
-![logo](images/getting_started/click_settings.png ':size=450')
+# Setup WIFI
 
-![logo](images/getting_started/enable_ssh.png ':size=450')
+!> After finishing the setup you need to create a "wpa_supplicant.conf" on the SD Card **if you want to connect your Raspberry Pi with WIFI**
 
-?> Enable SSH and set an username and password.
+Just create a file called "wpa_supplicant.conf" directly on the SD Card with following content:
 
-![logo](images/getting_started/set_user.png ':size=450')
-
-!> Enable Wireless LAN configuration as well, if you have no Ethernet cable plugged to your Raspberry
-
-![logo](images/getting_started/configure_wlan.png ':size=450')
+```shell
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=DE
+network={
+   ssid="{YOUR SSID}"
+   psk="{YOUR SSID PASSWORD}"
+}
+```
 
 ## 5. That`s it. Insert the SD Card in your Raspberry and start it.
 
