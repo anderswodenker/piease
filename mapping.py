@@ -1,2 +1,2 @@
 app_path = ''
-config_path = '/home/pi/piease/conf.ini'
+config_path = 'conf.ini'

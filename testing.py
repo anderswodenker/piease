@@ -1,13 +1,20 @@
-# Test a DHT22
-from sensorlib.dht22 import DHT22
+# import the LOAD CELL Library
+from sensorlib.scale import Scale
+import time
 
-my_dht22 = DHT22()
+# init your load cell
+load_cell = Scale()
 
-print('Testing my DHT22')
+# set up the load cell
+#load_cell.setup()
 
-data = my_dht22.get_data()
+#calibrate_with = input("Calibrate with: ")
 
-print(f"Temperature is:  {data['temp']}")
-print(f"The Humidity is: {data['hum']}")
+#load_cell.calibrate(int(calibrate_with)) # weight in Gramm
 
-print("It work`s!")
+# get data from the load cell
+# load_cell_data = load_cell.get_data()
+while True:
+ load_cell_data = load_cell.get_data()
+ print(load_cell_data)
+ time.sleep(1)
