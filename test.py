@@ -37,35 +37,3 @@ while True:
 
     time.sleep(0.5)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Zunächst ist die Aktivierung des Device Tree Overlay für 1-wire notwendig.
-# Dazu editiert man (per sudo nano oder einem anderen Editor Ihrer Wahl)
-# die Datei /boot/config.txt und fügt folgende Zeile hinzu:
-# dtoverlay=w1-gpio,gpiopin=4
-
-
-

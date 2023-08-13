@@ -14,6 +14,7 @@ relay03 = Device(19, "relay")
 relay04 = Device(26, "relay")
 
 
+
 while True:
     # Laden der Werte aus der conf.ini
     conf.get_config_data()
@@ -47,25 +48,6 @@ while True:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Zunächst ist die Aktivierung des Device Tree Overlay für 1-wire notwendig.
-# Dazu editiert man (per sudo nano oder einem anderen Editor Ihrer Wahl)
-# die Datei /boot/config.txt und fügt folgende Zeile hinzu:
-# dtoverlay=w1-gpio,gpiopin=4
 
 
 

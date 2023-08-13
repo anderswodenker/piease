@@ -1,17 +1,37 @@
 {% extends "base.html" %}
 {% block content %}
-    <section>
-        <div class="start">
-            <div class="startImage">
-                <img src="{{ url_for('static', filename='images/piease-coding-small.png') }}" alt="">
+<h1>Sensor Rechts</h1>
+<p>{{ sensor_rechts }} °C</p>
+<h1>Sensor Links</h1>
+<p>{{ sensor_links }} °C</p>
+
+<h1>xs_Temp</h1>
+<p>{{ xs_temp }}</p>
+
+<h1>xs_Hysterese</h1>
+<p>{{ xs_hysterese }}</p>
+
+
+<div class="formWrapper">
+    <h1 class="play-item center">Formular Test <span class="emoji"></span></h1>
+    <form action="{{ url_for('post_hello') }}" method="post">
+        <div class="input-wrapper">
+            <div>
+                <label class="name" for="form_xs_temp">
+                    <input type="text" name="form_xs_temp" placeholder="xs_temp">
+                </label>
             </div>
-            <h1>{{ headline }}</h1>
-            <div class="links">
-                <a href="https://anderswodenker.github.io/piease/" target="_blank">docs</a>
-                <a href="https://patreon.com/piease">app examples</a>
+            <div>
+                <label class="name" for="form_xs_hysterese">
+                    <input type="text" name="form_xs_hysterese" placeholder="xs_hysterese">
+                </label>
             </div>
-            <p>
-            </p>
+            <div class="button-wrapper">
+                <button type="submit">Hello</button>
+            </div>
         </div>
-    </section>
+    </form>
+</div>
+
+
 {% endblock %}
