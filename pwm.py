@@ -39,14 +39,14 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(18, GPIO.OUT)
 conf = LocalConfig()
 
-p = GPIO.PWM(18, 1000)  # frequency=50Hz
+p = GPIO.PWM(18, 1000)  # kHz
 p.start(0)
 try:
     while True:
         conf.get_config_data()
         ds_cycle = float(conf.settings['ds_cycle'])
         p.ChangeDutyCycle(ds_cycle)
-        time.sleep(0.2)
+        time.sleep(2)
 except KeyboardInterrupt:
     pass
     p.stop()
